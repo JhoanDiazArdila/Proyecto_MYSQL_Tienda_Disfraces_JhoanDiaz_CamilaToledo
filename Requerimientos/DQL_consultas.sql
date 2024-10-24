@@ -298,13 +298,14 @@ LIMIT 5;
 
 
 -- 35. Borrar los clientes que no han realizado compras en los últimos 2 años.
-DELETE FROM clientes
-WHERE id_cliente NOT IN(
-    SELECT DISTINCT c.id_cliente
-    FROM clientes c
-    JOIN facturas f ON c.id_cliente = f.id_cliente
-    WHERE f.fecha > NOW() - INTERVAL 2 YEAR
+DELETE FROM clientes c
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM facturas f
+    WHERE c.id_cliente = f.id_cliente
+    AND f.fecha > NOW() - INTERVAL 2 YEAR
 );
+
 
 
 -- 36. Mostrar productos que tengan stock menor de 2 para realizar compras
@@ -322,16 +323,17 @@ WHERE p.id_producto IN (SELECT id_producto FROM disfraces AS d WHERE d.stock_ven
 
 
 -- 37. Actualizar estado VIP a clientes con mas de 3 compras en el ultimo año
-UPDATE clientes
-SET vip = 1
-WHERE id_cliente IN (
-    SELECT c.id_cliente
-    FROM clientes c
-    JOIN facturas f ON c.id_cliente = f.id_cliente
-    WHERE f.fecha > NOW() - INTERVAL 1 YEAR
-    GROUP BY c.id_cliente
-    HAVING COUNT(f.id_factura) > 3 
+UPDATE clientes c
+SET c.vip = 1
+WHERE EXISTS (
+    SELECT 1
+    FROM facturas f
+    WHERE f.id_cliente = c.id_cliente
+    AND f.fecha > NOW() - INTERVAL 1 YEAR
+    GROUP BY f.id_cliente
+    HAVING COUNT(f.id_factura) > 3
 );
+
 
 -- 38. Mostrar los proveedores que han sido utilizados en los últimos tres meses.
 SELECT p.nombre_empresa AS Empresa,
@@ -368,7 +370,7 @@ SELECT p.nombre,
         d.stock_alquiler
 FROM productos AS p 
 JOIN disfraces AS d ON p.id_producto = d.id_producto
-JOIN temas AS tc ON d.id_tema = tc.id_tema
+JOIN tematicas AS tc ON d.id_tematica = tc.id_tematica
 JOIN tallas AS tll ON d.id_talla = tll.id_talla
 JOIN colores AS c ON d.id_color = c.id_color
 WHERE d.tipo_usuario = 'Niños'

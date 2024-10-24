@@ -28,7 +28,7 @@ END $$
 DELIMITER ;
 
 SET @ultima_transaccion = 0;
-CALL registrar_transaccion(50,'2024-10-23 08:34:00', 1, @ultima_transaccion);
+CALL registrar_transaccion(50,'2024-10-28 08:34:00', 1, @ultima_transaccion);
 
 SELECT * FROM transacciones;
 
@@ -56,7 +56,7 @@ END $$
 DELIMITER ;
 
 SET @ultima_factura = 0;
-CALL registrar_factura('2024-10-23', 1, @ultima_transaccion, 2, @ultima_factura);
+CALL registrar_factura('2024-10-28', 1, @ultima_transaccion, 2, @ultima_factura);
 
 SELECT * FROM facturas;
 
@@ -126,7 +126,7 @@ BEGIN
 END $$
 DELIMITER ;
 
-CALL registrar_alquiler_disfraz(@ultima_factura, 100, '2024-10-23', '2024-10-25', 5);
+CALL registrar_alquiler_disfraz(@ultima_factura, 100, '2024-10-28', '2024-10-30', 5);
 
 SELECT * FROM alquiler_disfraz;
 
@@ -346,7 +346,7 @@ END $$
 DELIMITER ;
 
 SET @ultima_factura_proveedor = 0;
-CALL registrar_factura_proveedor('2024-10-23', 123456789, @ultima_factura_proveedor);
+CALL registrar_factura_proveedor('2024-10-28', 123456789, @ultima_factura_proveedor);
 
 SELECT * FROM facturas_proveedor;
 

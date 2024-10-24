@@ -45,7 +45,7 @@ FLUSH PRIVILEGES;
 
 
 CREATE USER 'gerente'@'localhost' IDENTIFIED BY 'gerente_gerencioso';
-GRANT SELECT, INSERT, UPDATE, DELETE ON disfraces_doña_ruca.tipo_gastos TO 'gerente'@'localhost';
+GRANT SELECT, INSERT, UPDATE, DELETE ON disfraces_doña_ruca.tipos_gastos TO 'gerente'@'localhost';
 GRANT SELECT, INSERT, UPDATE ON disfraces_doña_ruca.gastos_operativos TO 'gerente'@'localhost';
 GRANT SELECT, INSERT, UPDATE, DELETE ON disfraces_doña_ruca.areas_trabajo TO 'gerente'@'localhost';
 GRANT SELECT, INSERT, UPDATE, DELETE ON disfraces_doña_ruca.puestos_trabajos TO 'gerente'@'localhost';
