@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ciudades_pueblos</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
+<link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/icon-font/icons.css">
+<script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
+
+  </head>
+  <body>
+    <div>
+
+      <!-- Name Title -->
+
+      <h1>ciudades_pueblos</h1>
+
+      <!-- Type and Stereotype -->
+
+      <section style="margin-top: .5em;">
+        <span class="alert alert-info">
+          <span class="node-icon staruml-icon icon-ERDEntity"></span>
+          ERDEntity
+        </span>
+        
+      </section>
+
+      <!-- Path -->
+
+      <section style="margin-top: 10px">
+        
+        
+        
+          
+          <span class="label label-info"><a href='cf9c8b720f3815adeccaf3ef6e48c6c4.html'><span class='node-icon staruml-icon icon-Project'></span>Proyecto_Base_datos</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='b34ff8ec6262fca4dbe8622ca72a8ca4.html'><span class='node-icon staruml-icon icon-ERDDataModel'></span>Tienda_disfraces_Doña_Ruca</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='b7d57eab075972d218767c02137b7a25.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>ciudades_pueblos</a></span>
+        
+      </section>
+
+      <!-- Diagram -->
+
+      
+
+      <!-- Description -->
+
+      
+      <section>
+        <h3>Description</h3>
+        <div>
+          
+            <p>Descripción:
+Esta tabla almacena información sobre las ciudades o pueblos que pertenecen a un departamento o estado específico.</p>
+
+<p>id<em>ciudad</em>pueblo (INT): Clave primaria, identificador único y autoincremental para cada ciudad o pueblo.
+nombre (VARCHAR): Nombre de la ciudad o pueblo. Este campo es obligatorio y no puede ser nulo.
+id<em>departamento</em>estado (INT): Llave foránea que referencia a la tabla departamentos_estados. Indica a qué departamento o estado pertenece la ciudad o pueblo.</p>
+          
+        </div>
+      </section>
+      
+
+      <!-- Specification -->
+
+      
+
+      <!-- Directed Relationship -->
+
+      
+
+      <!-- Undirected Relationship -->
+
+      
+
+      <!-- Classifier -->
+
+      
+
+      <!-- Interface -->
+
+      
+
+      <!-- Component -->
+
+      
+
+      <!-- Node -->
+
+      
+
+      <!-- Actor -->
+
+      
+
+      <!-- Use Case -->
+
+      
+
+      <!-- Template Parameters -->
+
+      
+
+      <!-- Literals -->
+
+      
+
+      <!-- Attributes -->
+
+      
+
+      <!-- Operations -->
+
+      
+
+      <!-- Receptions -->
+
+      
+
+      <!-- Extension Points -->
+
+      
+
+      <!-- Parameters -->
+
+      
+
+      <!-- Diagrams -->
+
+      
+      
+
+      <!-- Behavior -->
+
+      
+
+      <!-- Action -->
+
+      
+
+      <!-- Interaction -->
+
+      
+
+      <!-- CombinedFragment -->
+
+      
+
+      <!-- Activity -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State -->
+
+      
+
+      <!-- Vertex -->
+
+      
+
+      <!-- Transition -->
+
+      
+
+      <!-- Data Model (ERD) -->
+
+      
+
+      <!-- Columns (ERD) -->
+
+      
+      <section>
+        <h3>Columns</h3>
+        
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th width="20%">Name</th>
+            <th width="20%">Type</th>
+            <th width="10%">Primary Key</th>
+            <th width="10%">Foreign Key</th>
+            <th width="20%">Reference To</th>
+            <th width="10%">Nullable</th>
+            <th width="10%">Unique</th>
+          </tr>
+          
+          <tr>
+            <td><a href="fe15bf636698169e82485a639ce4426d.html">id_ciudad_pueblo</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="b041dd96a8acd354b352655081497740.html">nombre</a></td>
+            <td>VARCHAR(100)</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="e98915791ea1ef218b225b3d07c0f510.html">id_departamento_estado</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>true</span></td>
+            <td>
+              
+                <a href='48d244d4c89b7495144c6bc9bc55d270.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>departamentos_estados</a> ::
+              
+              <a href='c1905560d09cf4a33ecdde618c24148f.html'><span class='node-icon staruml-icon icon-ERDColumn'></span>id_departamento_estado</a>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+        </table>                
+      </section>
+      
+
+      <!-- Related Entities (ERD) -->
+
+      
+      <section>
+        <h3>Related Entities</h3>
+        
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th width="25%">Entity</th>
+            <th width="25%">Cardinality</th>
+            <th width="25%">Reference Name</th>
+            <th width="25%">Relationship</th>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='48d244d4c89b7495144c6bc9bc55d270.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>departamentos_estados</a></td>
+            <td>1</td>
+            <td></td>
+            <td><a href='56de56b55a3e00c56810f22fb6734d0e.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(departamentos_estados—ciudades_pueblos)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='28dbead993235f09921d15b4a923cc49.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>clientes</a></td>
+            <td>1..*</td>
+            <td></td>
+            <td><a href='7484869f497fc4e17af23f213dea8e02.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(ciudades_pueblos—clientes)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='4700451a966ee63a8ddc6ff111a5c97c.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>envios</a></td>
+            <td>1..*</td>
+            <td></td>
+            <td><a href='061cc7e03d54b5aa026530fe50c0b58a.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(ciudades_pueblos—envios)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='1a1411f408af9446d4b66b9c34405a26.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>proveedores</a></td>
+            <td>1..*</td>
+            <td></td>
+            <td><a href='54ad98760bbcf7d3fcee249767d0d5ca.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(ciudades_pueblos—proveedores)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='d3c823b268b3ba75161ef717f9d75cb3.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>empleados </a></td>
+            <td>1..*</td>
+            <td></td>
+            <td><a href='788310c492581694c529a412b3c88a1f.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(ciudades_pueblos—empleados )</a></td>
+          </tr>
+          
+        </table>                
+      </section>
+      
+
+      <!-- Data Flows (DFD) -->
+
+      
+
+      <!-- Flows (Flowchart) -->
+
+      
+
+      <!-- Properties -->
+
+      <section>
+        <h3>Properties</h3>
+        
+        <table class="table table-striped table-bordered">
+    <tr>
+        <th width="50%">Name</th>
+        <th width="50%">Value</th>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>name</td>
+        <td>ciudades_pueblos</td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</table>                
+
+      </section>
+
+      <!-- Tags -->
+
+      
+
+      <!-- Constraints, Dependencies, Dependants -->
+
+      
+
+      <!-- Relationships -->
+
+      
+      
+<section class="element-list">
+    <h3>Relationships</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='56de56b55a3e00c56810f22fb6734d0e.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(departamentos_estados—ciudades_pueblos)</a></li>
+        
+        <li><a href='7484869f497fc4e17af23f213dea8e02.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(ciudades_pueblos—clientes)</a></li>
+        
+        <li><a href='061cc7e03d54b5aa026530fe50c0b58a.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(ciudades_pueblos—envios)</a></li>
+        
+        <li><a href='54ad98760bbcf7d3fcee249767d0d5ca.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(ciudades_pueblos—proveedores)</a></li>
+        
+        <li><a href='788310c492581694c529a412b3c88a1f.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(ciudades_pueblos—empleados )</a></li>
+        
+    </ul>
+</section>
+
+
+
+      <!-- Owned Elements -->
+
+      
+      
+<section class="element-list">
+    <h3>Owned Elements</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='7484869f497fc4e17af23f213dea8e02.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(ciudades_pueblos—clientes)</a></li>
+        
+        <li><a href='061cc7e03d54b5aa026530fe50c0b58a.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(ciudades_pueblos—envios)</a></li>
+        
+        <li><a href='54ad98760bbcf7d3fcee249767d0d5ca.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(ciudades_pueblos—proveedores)</a></li>
+        
+        <li><a href='788310c492581694c529a412b3c88a1f.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(ciudades_pueblos—empleados )</a></li>
+        
+    </ul>
+</section>
+
+
+
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
+    </div>
+  </body>
+</html>

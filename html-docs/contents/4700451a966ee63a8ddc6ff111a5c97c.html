@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>envios</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
+<link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/icon-font/icons.css">
+<script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
+
+  </head>
+  <body>
+    <div>
+
+      <!-- Name Title -->
+
+      <h1>envios</h1>
+
+      <!-- Type and Stereotype -->
+
+      <section style="margin-top: .5em;">
+        <span class="alert alert-info">
+          <span class="node-icon staruml-icon icon-ERDEntity"></span>
+          ERDEntity
+        </span>
+        
+      </section>
+
+      <!-- Path -->
+
+      <section style="margin-top: 10px">
+        
+        
+        
+          
+          <span class="label label-info"><a href='cf9c8b720f3815adeccaf3ef6e48c6c4.html'><span class='node-icon staruml-icon icon-Project'></span>Proyecto_Base_datos</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='b34ff8ec6262fca4dbe8622ca72a8ca4.html'><span class='node-icon staruml-icon icon-ERDDataModel'></span>Tienda_disfraces_Doña_Ruca</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='4700451a966ee63a8ddc6ff111a5c97c.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>envios</a></span>
+        
+      </section>
+
+      <!-- Diagram -->
+
+      
+
+      <!-- Description -->
+
+      
+      <section>
+        <h3>Description</h3>
+        <div>
+          
+            <p>Descripción:
+Esta tabla contiene información sobre los envíos realizados por la empresa, incluyendo detalles sobre el estado y la ubicación del envío.</p>
+
+<p>id<em>envio (INT): Clave primaria, identificador único y autoincremental para cada envío.
+estado (ENUM): Estado del envío, que puede ser uno de los siguientes: &#39;Preparación&#39;, &#39;Recogido&#39;, &#39;En tránsito&#39;, &#39;Entregado&#39;. Este campo es obligatorio y no puede ser nulo.
+direccion</em>envio (VARCHAR): Dirección a la que se envía la mercancía. Este campo es obligatorio y no puede ser nulo.
+id<em>ciudad</em>pueblo (INT): Llave foránea que referencia a la tabla ciudades<em>pueblos, indicando la ciudad o pueblo donde se realiza el envío.
+zipcode (INT): Código postal del destino del envío. Este campo es obligatorio y no puede ser nulo.
+fecha</em>envio (DATE): Fecha en que se realizó el envío. Este campo es obligatorio y no puede ser nulo.
+nit<em>transportadora (BIGINT): Llave foránea que referencia a la tabla transportadoras, indicando qué transportadora se encarga del envío.
+id</em>factura (INT): Llave foránea que referencia a la tabla Facturas, indicando la factura que será enviada.</p>
+          
+        </div>
+      </section>
+      
+
+      <!-- Specification -->
+
+      
+
+      <!-- Directed Relationship -->
+
+      
+
+      <!-- Undirected Relationship -->
+
+      
+
+      <!-- Classifier -->
+
+      
+
+      <!-- Interface -->
+
+      
+
+      <!-- Component -->
+
+      
+
+      <!-- Node -->
+
+      
+
+      <!-- Actor -->
+
+      
+
+      <!-- Use Case -->
+
+      
+
+      <!-- Template Parameters -->
+
+      
+
+      <!-- Literals -->
+
+      
+
+      <!-- Attributes -->
+
+      
+
+      <!-- Operations -->
+
+      
+
+      <!-- Receptions -->
+
+      
+
+      <!-- Extension Points -->
+
+      
+
+      <!-- Parameters -->
+
+      
+
+      <!-- Diagrams -->
+
+      
+      
+
+      <!-- Behavior -->
+
+      
+
+      <!-- Action -->
+
+      
+
+      <!-- Interaction -->
+
+      
+
+      <!-- CombinedFragment -->
+
+      
+
+      <!-- Activity -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State -->
+
+      
+
+      <!-- Vertex -->
+
+      
+
+      <!-- Transition -->
+
+      
+
+      <!-- Data Model (ERD) -->
+
+      
+
+      <!-- Columns (ERD) -->
+
+      
+      <section>
+        <h3>Columns</h3>
+        
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th width="20%">Name</th>
+            <th width="20%">Type</th>
+            <th width="10%">Primary Key</th>
+            <th width="10%">Foreign Key</th>
+            <th width="20%">Reference To</th>
+            <th width="10%">Nullable</th>
+            <th width="10%">Unique</th>
+          </tr>
+          
+          <tr>
+            <td><a href="7d1ff7cf46bf040d5a2a1263413535f4.html">id_envio</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="4c871957abc74c2edaf80e88de9941e5.html">estado</a></td>
+            <td>BOOLEAN</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="ef034aade7352560e6cc283a982ee9d0.html">direccion_envio</a></td>
+            <td>VARCHAR(100)</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="0a55bcaae2f40cd89f1aa9c340600069.html">id_ciudad_pueblo</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>true</span></td>
+            <td>
+              
+                <a href='b7d57eab075972d218767c02137b7a25.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>ciudades_pueblos</a> ::
+              
+              <a href='fe15bf636698169e82485a639ce4426d.html'><span class='node-icon staruml-icon icon-ERDColumn'></span>id_ciudad_pueblo</a>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="e6338215bffde3efaff009fb47cee57e.html">zipcode</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="64b7a4821c591420262c0fc2826078e3.html">NIT_transportadora</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>true</span></td>
+            <td>
+              
+                <a href='e2cc5036f042b59b11012bda7723535b.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>Transportadoras</a> ::
+              
+              <a href='c4d37f40009e613926095e55a286fd20.html'><span class='node-icon staruml-icon icon-ERDColumn'></span>NIT_transportadora</a>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="b78e3e6a8ff579cb25e69ab344307948.html">fecha_envio</a></td>
+            <td>DATE</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="d97511ce8d866f90d21650722746889e.html">id_factura</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>true</span></td>
+            <td>
+              
+                <a href='78b5973b60a3eb6c0849ade1e94338fe.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>facturas</a> ::
+              
+              <a href='4302caf5431042635186dc1e39950700.html'><span class='node-icon staruml-icon icon-ERDColumn'></span>id_factura</a>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+        </table>                
+      </section>
+      
+
+      <!-- Related Entities (ERD) -->
+
+      
+      <section>
+        <h3>Related Entities</h3>
+        
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th width="25%">Entity</th>
+            <th width="25%">Cardinality</th>
+            <th width="25%">Reference Name</th>
+            <th width="25%">Relationship</th>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='78b5973b60a3eb6c0849ade1e94338fe.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>facturas</a></td>
+            <td>1</td>
+            <td></td>
+            <td><a href='809bc363190b5148de1256928d2e4f14.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(facturas—envios)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='b7d57eab075972d218767c02137b7a25.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>ciudades_pueblos</a></td>
+            <td>1</td>
+            <td></td>
+            <td><a href='061cc7e03d54b5aa026530fe50c0b58a.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(ciudades_pueblos—envios)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='e2cc5036f042b59b11012bda7723535b.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>Transportadoras</a></td>
+            <td>1</td>
+            <td></td>
+            <td><a href='2eb72b8700b5a8d1e60f332d1e8028b8.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(Transportadoras—envios)</a></td>
+          </tr>
+          
+        </table>                
+      </section>
+      
+
+      <!-- Data Flows (DFD) -->
+
+      
+
+      <!-- Flows (Flowchart) -->
+
+      
+
+      <!-- Properties -->
+
+      <section>
+        <h3>Properties</h3>
+        
+        <table class="table table-striped table-bordered">
+    <tr>
+        <th width="50%">Name</th>
+        <th width="50%">Value</th>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>name</td>
+        <td>envios</td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</table>                
+
+      </section>
+
+      <!-- Tags -->
+
+      
+
+      <!-- Constraints, Dependencies, Dependants -->
+
+      
+
+      <!-- Relationships -->
+
+      
+      
+<section class="element-list">
+    <h3>Relationships</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='809bc363190b5148de1256928d2e4f14.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(facturas—envios)</a></li>
+        
+        <li><a href='061cc7e03d54b5aa026530fe50c0b58a.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(ciudades_pueblos—envios)</a></li>
+        
+        <li><a href='2eb72b8700b5a8d1e60f332d1e8028b8.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(Transportadoras—envios)</a></li>
+        
+    </ul>
+</section>
+
+
+
+      <!-- Owned Elements -->
+
+      
+      
+
+
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>facturas</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
+<link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/icon-font/icons.css">
+<script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
+
+  </head>
+  <body>
+    <div>
+
+      <!-- Name Title -->
+
+      <h1>facturas</h1>
+
+      <!-- Type and Stereotype -->
+
+      <section style="margin-top: .5em;">
+        <span class="alert alert-info">
+          <span class="node-icon staruml-icon icon-ERDEntity"></span>
+          ERDEntity
+        </span>
+        
+      </section>
+
+      <!-- Path -->
+
+      <section style="margin-top: 10px">
+        
+        
+        
+          
+          <span class="label label-info"><a href='cf9c8b720f3815adeccaf3ef6e48c6c4.html'><span class='node-icon staruml-icon icon-Project'></span>Proyecto_Base_datos</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='b34ff8ec6262fca4dbe8622ca72a8ca4.html'><span class='node-icon staruml-icon icon-ERDDataModel'></span>Tienda_disfraces_Doña_Ruca</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='78b5973b60a3eb6c0849ade1e94338fe.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>facturas</a></span>
+        
+      </section>
+
+      <!-- Diagram -->
+
+      
+
+      <!-- Description -->
+
+      
+      <section>
+        <h3>Description</h3>
+        <div>
+          
+            <p>Descripción:
+Esta tabla almacena información sobre las facturas emitidas por la organización.</p>
+
+<p>id<em>factura (INT): Clave primaria, identificador único y autoincremental para cada factura.
+fecha (DATE): Fecha en que se emitió la factura. Este campo es obligatorio y no puede ser nulo.
+total (DECIMAL): Total de la factura, representado como un valor decimal. Este campo es obligatorio y no puede ser nulo.
+id</em>cliente (INT): Llave foránea que referencia a la tabla clientes. Indica a qué cliente se le emitió la factura.
+id<em>transacion (INT): Llave foránea que referencia a la tabla transacciones. Indica qué transacción corresponde a la factura.
+id</em>empleado (INT): Llave foránea que referencia a la tabla empleados. Indica qué empleado emitió la factura.</p>
+          
+        </div>
+      </section>
+      
+
+      <!-- Specification -->
+
+      
+
+      <!-- Directed Relationship -->
+
+      
+
+      <!-- Undirected Relationship -->
+
+      
+
+      <!-- Classifier -->
+
+      
+
+      <!-- Interface -->
+
+      
+
+      <!-- Component -->
+
+      
+
+      <!-- Node -->
+
+      
+
+      <!-- Actor -->
+
+      
+
+      <!-- Use Case -->
+
+      
+
+      <!-- Template Parameters -->
+
+      
+
+      <!-- Literals -->
+
+      
+
+      <!-- Attributes -->
+
+      
+
+      <!-- Operations -->
+
+      
+
+      <!-- Receptions -->
+
+      
+
+      <!-- Extension Points -->
+
+      
+
+      <!-- Parameters -->
+
+      
+
+      <!-- Diagrams -->
+
+      
+      
+
+      <!-- Behavior -->
+
+      
+
+      <!-- Action -->
+
+      
+
+      <!-- Interaction -->
+
+      
+
+      <!-- CombinedFragment -->
+
+      
+
+      <!-- Activity -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State -->
+
+      
+
+      <!-- Vertex -->
+
+      
+
+      <!-- Transition -->
+
+      
+
+      <!-- Data Model (ERD) -->
+
+      
+
+      <!-- Columns (ERD) -->
+
+      
+      <section>
+        <h3>Columns</h3>
+        
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th width="20%">Name</th>
+            <th width="20%">Type</th>
+            <th width="10%">Primary Key</th>
+            <th width="10%">Foreign Key</th>
+            <th width="20%">Reference To</th>
+            <th width="10%">Nullable</th>
+            <th width="10%">Unique</th>
+          </tr>
+          
+          <tr>
+            <td><a href="4302caf5431042635186dc1e39950700.html">id_factura</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="1990cae852f427bd5d5a8586a6d9092f.html">fecha</a></td>
+            <td>DATE</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="f585ee3aea972d5152ad52013d1e76be.html">total</a></td>
+            <td>DECIMAL(10,2)</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="b6843561dbdb3d83ebc9e5cf93b0fe68.html">id_cliente</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>true</span></td>
+            <td>
+              
+                <a href='28dbead993235f09921d15b4a923cc49.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>clientes</a> ::
+              
+              <a href='a9dfb7740178b592d989313460fd9446.html'><span class='node-icon staruml-icon icon-ERDColumn'></span>id_cliente</a>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="205c29f64de99d0e644a2b387e3d0ff9.html">id_venta</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>true</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="560ae16d9d275501c9bad1b7d0f833ce.html">id_transacion</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>true</span></td>
+            <td>
+              
+                <a href='90f064da6c535111735b21c4cc4b09e0.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>transacciones</a> ::
+              
+              <a href='b6893fe6eb3540dd3e6124c41843a9b0.html'><span class='node-icon staruml-icon icon-ERDColumn'></span>id_transaccion</a>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="468205392c32be2c478240e0dae100f0.html">id_empleado</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>true</span></td>
+            <td>
+              
+                <a href='d3c823b268b3ba75161ef717f9d75cb3.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>empleados </a> ::
+              
+              <a href='8241520206b971ab9174a26cebaa8c1a.html'><span class='node-icon staruml-icon icon-ERDColumn'></span>id_empleado</a>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+        </table>                
+      </section>
+      
+
+      <!-- Related Entities (ERD) -->
+
+      
+      <section>
+        <h3>Related Entities</h3>
+        
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th width="25%">Entity</th>
+            <th width="25%">Cardinality</th>
+            <th width="25%">Reference Name</th>
+            <th width="25%">Relationship</th>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='d3c823b268b3ba75161ef717f9d75cb3.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>empleados </a></td>
+            <td>1</td>
+            <td></td>
+            <td><a href='0d8d9e237d2b621087803959cb89acef.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(empleados —facturas)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='28dbead993235f09921d15b4a923cc49.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>clientes</a></td>
+            <td>1</td>
+            <td></td>
+            <td><a href='ba9d3c54a113e5d1ddb49eb2bca673b7.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(clientes—facturas)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='63c8e79c88e41efeb4b832e6afb0fa33.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>alquiler_disfraz</a></td>
+            <td>1..*</td>
+            <td></td>
+            <td><a href='9cb26b1a3b4b9046f0195a9543159ce8.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(facturas—alquiler_disfraz)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='404e47bb4c6880388301646498ce5244.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>venta_producto</a></td>
+            <td>1..*</td>
+            <td></td>
+            <td><a href='55c3601702646fb23e05f29c1d08dd10.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(facturas—venta_producto)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='4700451a966ee63a8ddc6ff111a5c97c.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>envios</a></td>
+            <td>1..*</td>
+            <td></td>
+            <td><a href='809bc363190b5148de1256928d2e4f14.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(facturas—envios)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='90f064da6c535111735b21c4cc4b09e0.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>transacciones</a></td>
+            <td>1</td>
+            <td></td>
+            <td><a href='403dd113db743eda72d41507013b4e43.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(transacciones—facturas)</a></td>
+          </tr>
+          
+        </table>                
+      </section>
+      
+
+      <!-- Data Flows (DFD) -->
+
+      
+
+      <!-- Flows (Flowchart) -->
+
+      
+
+      <!-- Properties -->
+
+      <section>
+        <h3>Properties</h3>
+        
+        <table class="table table-striped table-bordered">
+    <tr>
+        <th width="50%">Name</th>
+        <th width="50%">Value</th>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>name</td>
+        <td>facturas</td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</table>                
+
+      </section>
+
+      <!-- Tags -->
+
+      
+
+      <!-- Constraints, Dependencies, Dependants -->
+
+      
+
+      <!-- Relationships -->
+
+      
+      
+<section class="element-list">
+    <h3>Relationships</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='0d8d9e237d2b621087803959cb89acef.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(empleados —facturas)</a></li>
+        
+        <li><a href='ba9d3c54a113e5d1ddb49eb2bca673b7.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(clientes—facturas)</a></li>
+        
+        <li><a href='9cb26b1a3b4b9046f0195a9543159ce8.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(facturas—alquiler_disfraz)</a></li>
+        
+        <li><a href='55c3601702646fb23e05f29c1d08dd10.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(facturas—venta_producto)</a></li>
+        
+        <li><a href='809bc363190b5148de1256928d2e4f14.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(facturas—envios)</a></li>
+        
+        <li><a href='403dd113db743eda72d41507013b4e43.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(transacciones—facturas)</a></li>
+        
+    </ul>
+</section>
+
+
+
+      <!-- Owned Elements -->
+
+      
+      
+<section class="element-list">
+    <h3>Owned Elements</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='9cb26b1a3b4b9046f0195a9543159ce8.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(facturas—alquiler_disfraz)</a></li>
+        
+        <li><a href='55c3601702646fb23e05f29c1d08dd10.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(facturas—venta_producto)</a></li>
+        
+        <li><a href='809bc363190b5148de1256928d2e4f14.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(facturas—envios)</a></li>
+        
+    </ul>
+</section>
+
+
+
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
+    </div>
+  </body>
+</html>

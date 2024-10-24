@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>compra_producto</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
+<link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/icon-font/icons.css">
+<script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
+
+  </head>
+  <body>
+    <div>
+
+      <!-- Name Title -->
+
+      <h1>compra_producto</h1>
+
+      <!-- Type and Stereotype -->
+
+      <section style="margin-top: .5em;">
+        <span class="alert alert-info">
+          <span class="node-icon staruml-icon icon-ERDEntity"></span>
+          ERDEntity
+        </span>
+        
+      </section>
+
+      <!-- Path -->
+
+      <section style="margin-top: 10px">
+        
+        
+        
+          
+          <span class="label label-info"><a href='cf9c8b720f3815adeccaf3ef6e48c6c4.html'><span class='node-icon staruml-icon icon-Project'></span>Proyecto_Base_datos</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='b34ff8ec6262fca4dbe8622ca72a8ca4.html'><span class='node-icon staruml-icon icon-ERDDataModel'></span>Tienda_disfraces_Doña_Ruca</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='d5266c1dce552a747593598f47641336.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>compra_producto</a></span>
+        
+      </section>
+
+      <!-- Diagram -->
+
+      
+
+      <!-- Description -->
+
+      
+      <section>
+        <h3>Description</h3>
+        <div>
+          
+            <p>Descripción:
+Esta tabla almacena información sobre los productos comprados a los proveedores, vinculando cada compra con su respectiva factura.</p>
+
+<p>id<em>factura</em>proveedor (INT): Llave foránea que referencia a la tabla facturas<em>proveedor. Indica a qué factura de proveedor corresponde la compra del producto.
+id</em>producto(INT): Llave foránea que referencia a la tabla productos. Indica qué producto se ha comprado.
+cantidad (INT): Cantidad del producto comprado. Este campo es obligatorio y no puede ser nulo.
+PRIMARY KEY (id<em>factura</em>proveedor, id_producto): Esta combinación de claves asegura que cada compra de un producto esté asociada con una factura específica y que no haya duplicados en la misma factura para un producto determinado.</p>
+          
+        </div>
+      </section>
+      
+
+      <!-- Specification -->
+
+      
+
+      <!-- Directed Relationship -->
+
+      
+
+      <!-- Undirected Relationship -->
+
+      
+
+      <!-- Classifier -->
+
+      
+
+      <!-- Interface -->
+
+      
+
+      <!-- Component -->
+
+      
+
+      <!-- Node -->
+
+      
+
+      <!-- Actor -->
+
+      
+
+      <!-- Use Case -->
+
+      
+
+      <!-- Template Parameters -->
+
+      
+
+      <!-- Literals -->
+
+      
+
+      <!-- Attributes -->
+
+      
+
+      <!-- Operations -->
+
+      
+
+      <!-- Receptions -->
+
+      
+
+      <!-- Extension Points -->
+
+      
+
+      <!-- Parameters -->
+
+      
+
+      <!-- Diagrams -->
+
+      
+      
+
+      <!-- Behavior -->
+
+      
+
+      <!-- Action -->
+
+      
+
+      <!-- Interaction -->
+
+      
+
+      <!-- CombinedFragment -->
+
+      
+
+      <!-- Activity -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State -->
+
+      
+
+      <!-- Vertex -->
+
+      
+
+      <!-- Transition -->
+
+      
+
+      <!-- Data Model (ERD) -->
+
+      
+
+      <!-- Columns (ERD) -->
+
+      
+      <section>
+        <h3>Columns</h3>
+        
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th width="20%">Name</th>
+            <th width="20%">Type</th>
+            <th width="10%">Primary Key</th>
+            <th width="10%">Foreign Key</th>
+            <th width="20%">Reference To</th>
+            <th width="10%">Nullable</th>
+            <th width="10%">Unique</th>
+          </tr>
+          
+          <tr>
+            <td><a href="70eff5a24d245e93b6909ae1e1945191.html">id_factura_proveedor</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>true</span></td>
+            <td>
+              
+                <a href='0dd357be1c54f288851c99a4a0003583.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>facturas_proveedor</a> ::
+              
+              <a href='1ce4f2e9e6ba9c8a5ecf66bd2e9eaf0a.html'><span class='node-icon staruml-icon icon-ERDColumn'></span>id_factura_proveedor</a>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="77b953526379b4e1e7ffb127bf9dff64.html">id_producto</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>true</span></td>
+            <td>
+              
+                <a href='779b795376fa96aceef2a4951887044f.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>productos</a> ::
+              
+              <a href='8eec9452dc6f81371131a37acdf85926.html'><span class='node-icon staruml-icon icon-ERDColumn'></span>id_producto</a>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="cf40b1fd416065103380d838c53fda6c.html">cantidad</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+        </table>                
+      </section>
+      
+
+      <!-- Related Entities (ERD) -->
+
+      
+      <section>
+        <h3>Related Entities</h3>
+        
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th width="25%">Entity</th>
+            <th width="25%">Cardinality</th>
+            <th width="25%">Reference Name</th>
+            <th width="25%">Relationship</th>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='779b795376fa96aceef2a4951887044f.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>productos</a></td>
+            <td>1</td>
+            <td></td>
+            <td><a href='46b75aa64fe54e33e3656ccaf24ad1b0.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(productos—compra_producto)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='0dd357be1c54f288851c99a4a0003583.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>facturas_proveedor</a></td>
+            <td>1</td>
+            <td></td>
+            <td><a href='b65ce539564b6671dc34aace660cbebd.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(facturas_proveedor—compra_producto)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='0dd357be1c54f288851c99a4a0003583.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>facturas_proveedor</a></td>
+            <td>1</td>
+            <td></td>
+            <td><a href='ca61605406ae32d25bca6a5d64a51e5b.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(facturas_proveedor—compra_producto)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='4f932dfa93a61d7b9cb724dd3fa591ed.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>maquillaje</a></td>
+            <td>1</td>
+            <td></td>
+            <td><a href='2193e012ede3f8791536642887a683f9.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(maquillaje—compra_producto)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='779b795376fa96aceef2a4951887044f.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>productos</a></td>
+            <td>1</td>
+            <td></td>
+            <td><a href='805881db3aa958b6cf788babece29fbd.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(productos—compra_producto)</a></td>
+          </tr>
+          
+        </table>                
+      </section>
+      
+
+      <!-- Data Flows (DFD) -->
+
+      
+
+      <!-- Flows (Flowchart) -->
+
+      
+
+      <!-- Properties -->
+
+      <section>
+        <h3>Properties</h3>
+        
+        <table class="table table-striped table-bordered">
+    <tr>
+        <th width="50%">Name</th>
+        <th width="50%">Value</th>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>name</td>
+        <td>compra_producto</td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</table>                
+
+      </section>
+
+      <!-- Tags -->
+
+      
+
+      <!-- Constraints, Dependencies, Dependants -->
+
+      
+
+      <!-- Relationships -->
+
+      
+      
+<section class="element-list">
+    <h3>Relationships</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='46b75aa64fe54e33e3656ccaf24ad1b0.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(productos—compra_producto)</a></li>
+        
+        <li><a href='b65ce539564b6671dc34aace660cbebd.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(facturas_proveedor—compra_producto)</a></li>
+        
+        <li><a href='ca61605406ae32d25bca6a5d64a51e5b.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(facturas_proveedor—compra_producto)</a></li>
+        
+        <li><a href='2193e012ede3f8791536642887a683f9.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(maquillaje—compra_producto)</a></li>
+        
+        <li><a href='805881db3aa958b6cf788babece29fbd.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(productos—compra_producto)</a></li>
+        
+    </ul>
+</section>
+
+
+
+      <!-- Owned Elements -->
+
+      
+      
+
+
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>disfraces</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
+<link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/icon-font/icons.css">
+<script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
+
+  </head>
+  <body>
+    <div>
+
+      <!-- Name Title -->
+
+      <h1>disfraces</h1>
+
+      <!-- Type and Stereotype -->
+
+      <section style="margin-top: .5em;">
+        <span class="alert alert-info">
+          <span class="node-icon staruml-icon icon-ERDEntity"></span>
+          ERDEntity
+        </span>
+        
+      </section>
+
+      <!-- Path -->
+
+      <section style="margin-top: 10px">
+        
+        
+        
+          
+          <span class="label label-info"><a href='cf9c8b720f3815adeccaf3ef6e48c6c4.html'><span class='node-icon staruml-icon icon-Project'></span>Proyecto_Base_datos</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='b34ff8ec6262fca4dbe8622ca72a8ca4.html'><span class='node-icon staruml-icon icon-ERDDataModel'></span>Tienda_disfraces_Doña_Ruca</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='f9418db73df826156f89ec7c8e9770d2.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>disfraces</a></span>
+        
+      </section>
+
+      <!-- Diagram -->
+
+      
+
+      <!-- Description -->
+
+      
+      <section>
+        <h3>Description</h3>
+        <div>
+          
+            <p>Descripción:
+Esta tabla contiene los detalles específicos de los disfraces que la tienda tiene en venta y alquiler. Almacena información sobre género, usuario al que está dirigido (niños o adultos), y la relación con el producto base, además del stock disponible tanto para venta como para alquiler.</p>
+
+<p>id<em>disfraz (INT): Clave primaria, identificador único para cada disfraz, autoincremental.
+genero (ENUM): Especifica si el disfraz está diseñado para hombres, mujeres o si es unisex.
+tipo</em>usuario (ENUM): Define si el disfraz es para niños o para adultos.
+id<em>tematica (INT): Llave foránea que referencia a la tabla tematicas. Define la temática del disfraz, como superhéroes, mitología griega, animales, etc.
+id</em>color (INT): Llave foránea que referencia a la tabla colores. Indica el color predominante del disfraz.
+id<em>talla (INT): Llave foránea que referencia a la tabla tallas. Indica la talla del disfraz (por ejemplo, pequeña, mediana, grande).
+id</em>producto (INT): Llave foránea que referencia a la tabla productos. Cada disfraz está vinculado a un producto base en la tabla de productos.
+stock<em>venta (INT): La cantidad de disfraces disponibles para la venta.
+stock</em>alquiler (INT): La cantidad de disfraces disponibles para alquilar.
+precio_alquiler (DECIMAL): El precio al que se alquila el disfraz.
+Relaciones:</p>
+
+<p>id<em>tematica referencia a tematicas(id</em>tematica): Esta relación asocia cada disfraz con una temática predefinida (superhéroes, anime, animales, etc.).
+id<em>color referencia a colores(id</em>color): Vincula cada disfraz con un color específico de la tabla de colores.
+id<em>talla referencia a tallas(id</em>talla): Asigna la talla del disfraz, que se gestiona en la tabla de tallas.
+id<em>producto referencia a productos(id</em>producto): Conecta el disfraz con su correspondiente entrada en la tabla de productos, para llevar un control general de todos los productos, ya sean disfraces, accesorios, maquillaje, etc.</p>
+          
+        </div>
+      </section>
+      
+
+      <!-- Specification -->
+
+      
+
+      <!-- Directed Relationship -->
+
+      
+
+      <!-- Undirected Relationship -->
+
+      
+
+      <!-- Classifier -->
+
+      
+
+      <!-- Interface -->
+
+      
+
+      <!-- Component -->
+
+      
+
+      <!-- Node -->
+
+      
+
+      <!-- Actor -->
+
+      
+
+      <!-- Use Case -->
+
+      
+
+      <!-- Template Parameters -->
+
+      
+
+      <!-- Literals -->
+
+      
+
+      <!-- Attributes -->
+
+      
+
+      <!-- Operations -->
+
+      
+
+      <!-- Receptions -->
+
+      
+
+      <!-- Extension Points -->
+
+      
+
+      <!-- Parameters -->
+
+      
+
+      <!-- Diagrams -->
+
+      
+      
+
+      <!-- Behavior -->
+
+      
+
+      <!-- Action -->
+
+      
+
+      <!-- Interaction -->
+
+      
+
+      <!-- CombinedFragment -->
+
+      
+
+      <!-- Activity -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State -->
+
+      
+
+      <!-- Vertex -->
+
+      
+
+      <!-- Transition -->
+
+      
+
+      <!-- Data Model (ERD) -->
+
+      
+
+      <!-- Columns (ERD) -->
+
+      
+      <section>
+        <h3>Columns</h3>
+        
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th width="20%">Name</th>
+            <th width="20%">Type</th>
+            <th width="10%">Primary Key</th>
+            <th width="10%">Foreign Key</th>
+            <th width="20%">Reference To</th>
+            <th width="10%">Nullable</th>
+            <th width="10%">Unique</th>
+          </tr>
+          
+          <tr>
+            <td><a href="78466fdd6548b11f21b6c25a3b1073ea.html">id_producto</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>true</span></td>
+            <td>
+              
+                <a href='779b795376fa96aceef2a4951887044f.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>productos</a> ::
+              
+              <a href='8eec9452dc6f81371131a37acdf85926.html'><span class='node-icon staruml-icon icon-ERDColumn'></span>id_producto</a>
+            </td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="a77ad4ffc9a961d953f9f85dd3bd1526.html">descripcion</a></td>
+            <td>VARCHAR(100)</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="fb1cd7ceb31890d62f1d8b02f856b57f.html">genero</a></td>
+            <td>BOOLEAN</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="8620c04e43401fb71b496e4e1f40da75.html">tipo_usuario</a></td>
+            <td>BOOLEAN</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="78a12ae7b835d1c12a60d930dd3a8b57.html">id_tematica</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>true</span></td>
+            <td>
+              
+                <a href='9cda4d0b6acfe4ff0d14293bc9360d23.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>tematicas</a> ::
+              
+              <a href='28964552f6246572b98bbf0aa26e7c08.html'><span class='node-icon staruml-icon icon-ERDColumn'></span>id_tematica</a>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="84f6b97affe6cf198d57b295f3624d89.html">id_color</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>true</span></td>
+            <td>
+              
+                <a href='1a7663d483955f4c1f838b298611474a.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>colores</a> ::
+              
+              <a href='29eceb0ae0b2234f606164ecf1d23ec6.html'><span class='node-icon staruml-icon icon-ERDColumn'></span>id_color</a>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="184ac6662fb37b60ec31f9dd2216b386.html">id_talla</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>true</span></td>
+            <td>
+              
+                <a href='12571d3b6c53ca2359fa29caaee2982d.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>tallas</a> ::
+              
+              <a href='8b75dd0ede70f8393818588f3ce566fe.html'><span class='node-icon staruml-icon icon-ERDColumn'></span>id_talla</a>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="c47bc750ff0a880a54ff9d364f7992d4.html">stock_venta</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="58ac7b9be50bca5c0f2230a369659bc9.html">stcok_alquiler</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="67fc26ba66382933973c6c7216d2aba0.html">precio_alquiler</a></td>
+            <td>DECIMAL(10,2)</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+        </table>                
+      </section>
+      
+
+      <!-- Related Entities (ERD) -->
+
+      
+      <section>
+        <h3>Related Entities</h3>
+        
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th width="25%">Entity</th>
+            <th width="25%">Cardinality</th>
+            <th width="25%">Reference Name</th>
+            <th width="25%">Relationship</th>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='63c8e79c88e41efeb4b832e6afb0fa33.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>alquiler_disfraz</a></td>
+            <td>1..*</td>
+            <td></td>
+            <td><a href='fa4c19ed6e8781d7bab5a21ec5a8bab0.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(disfraces—alquiler_disfraz)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='9cda4d0b6acfe4ff0d14293bc9360d23.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>tematicas</a></td>
+            <td>1</td>
+            <td></td>
+            <td><a href='ed0f3afb09785da925ecd05170d76f90.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(tematicas—disfraces)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='1a7663d483955f4c1f838b298611474a.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>colores</a></td>
+            <td>1</td>
+            <td></td>
+            <td><a href='3c4086e4d5ed9cdaeba11f3728dfa3b2.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(colores—disfraces)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='12571d3b6c53ca2359fa29caaee2982d.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>tallas</a></td>
+            <td>1</td>
+            <td></td>
+            <td><a href='031493c90cff8c84c9354502ed4aa040.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(tallas—disfraces)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='404e47bb4c6880388301646498ce5244.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>venta_producto</a></td>
+            <td>1..*</td>
+            <td></td>
+            <td><a href='9883538ffa53e4b62ab4b4b824e61166.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(disfraces—venta_producto)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='779b795376fa96aceef2a4951887044f.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>productos</a></td>
+            <td>1</td>
+            <td></td>
+            <td><a href='c9de940fd295b2f314e9062aef020fbb.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(productos—disfraces)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='63c8e79c88e41efeb4b832e6afb0fa33.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>alquiler_disfraz</a></td>
+            <td>1..*</td>
+            <td></td>
+            <td><a href='87b865f41571d222dc56b5ceb1798412.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(disfraces—alquiler_disfraz)</a></td>
+          </tr>
+          
+        </table>                
+      </section>
+      
+
+      <!-- Data Flows (DFD) -->
+
+      
+
+      <!-- Flows (Flowchart) -->
+
+      
+
+      <!-- Properties -->
+
+      <section>
+        <h3>Properties</h3>
+        
+        <table class="table table-striped table-bordered">
+    <tr>
+        <th width="50%">Name</th>
+        <th width="50%">Value</th>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>name</td>
+        <td>disfraces</td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</table>                
+
+      </section>
+
+      <!-- Tags -->
+
+      
+
+      <!-- Constraints, Dependencies, Dependants -->
+
+      
+
+      <!-- Relationships -->
+
+      
+      
+<section class="element-list">
+    <h3>Relationships</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='fa4c19ed6e8781d7bab5a21ec5a8bab0.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(disfraces—alquiler_disfraz)</a></li>
+        
+        <li><a href='ed0f3afb09785da925ecd05170d76f90.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(tematicas—disfraces)</a></li>
+        
+        <li><a href='3c4086e4d5ed9cdaeba11f3728dfa3b2.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(colores—disfraces)</a></li>
+        
+        <li><a href='031493c90cff8c84c9354502ed4aa040.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(tallas—disfraces)</a></li>
+        
+        <li><a href='9883538ffa53e4b62ab4b4b824e61166.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(disfraces—venta_producto)</a></li>
+        
+        <li><a href='c9de940fd295b2f314e9062aef020fbb.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(productos—disfraces)</a></li>
+        
+        <li><a href='87b865f41571d222dc56b5ceb1798412.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(disfraces—alquiler_disfraz)</a></li>
+        
+    </ul>
+</section>
+
+
+
+      <!-- Owned Elements -->
+
+      
+      
+<section class="element-list">
+    <h3>Owned Elements</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='fa4c19ed6e8781d7bab5a21ec5a8bab0.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(disfraces—alquiler_disfraz)</a></li>
+        
+        <li><a href='9883538ffa53e4b62ab4b4b824e61166.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(disfraces—venta_producto)</a></li>
+        
+    </ul>
+</section>
+
+
+
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>empleados </title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
+<link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/icon-font/icons.css">
+<script type="text/javascript" src="../assets/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.bonsai.js"></script>
+<script type="text/javascript" src="../assets/js/imageMapResizer.min.js"></script>
+
+  </head>
+  <body>
+    <div>
+
+      <!-- Name Title -->
+
+      <h1>empleados </h1>
+
+      <!-- Type and Stereotype -->
+
+      <section style="margin-top: .5em;">
+        <span class="alert alert-info">
+          <span class="node-icon staruml-icon icon-ERDEntity"></span>
+          ERDEntity
+        </span>
+        
+      </section>
+
+      <!-- Path -->
+
+      <section style="margin-top: 10px">
+        
+        
+        
+          
+          <span class="label label-info"><a href='cf9c8b720f3815adeccaf3ef6e48c6c4.html'><span class='node-icon staruml-icon icon-Project'></span>Proyecto_Base_datos</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='b34ff8ec6262fca4dbe8622ca72a8ca4.html'><span class='node-icon staruml-icon icon-ERDDataModel'></span>Tienda_disfraces_Doña_Ruca</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='d3c823b268b3ba75161ef717f9d75cb3.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>empleados </a></span>
+        
+      </section>
+
+      <!-- Diagram -->
+
+      
+
+      <!-- Description -->
+
+      
+      <section>
+        <h3>Description</h3>
+        <div>
+          
+            <p>Descripción:
+Esta tabla almacena información sobre los empleados de la organización.</p>
+
+<p>id<em>empleado (INT): Clave primaria, identificador único y autoincremental para cada empleado.
+nombre (VARCHAR): Nombre del empleado. Este campo es obligatorio y no puede ser nulo.
+telefono (VARCHAR): Número de teléfono del empleado. Este campo es único y no puede ser nulo.
+correo (VARCHAR): Dirección de correo electrónico del empleado. Este campo es único y no puede ser nulo.
+direccion (VARCHAR): Dirección de residencia del empleado. Este campo es obligatorio y no puede ser nulo.
+id</em>ciudad<em>pueblo (INT): Llave foránea que referencia a la tabla ciudades</em>pueblos. Indica a qué ciudad o pueblo pertenece el empleado.
+zipcode (INT): Código postal de la dirección del empleado. Este campo es obligatorio.
+fecha<em>contratacion (DATE): Fecha en la que el empleado fue contratado. Este campo es obligatorio.
+id</em>puesto<em>trabajo (INT): Llave foránea que referencia a la tabla puestos</em>trabajos. Indica el puesto de trabajo que ocupa el empleado.
+estado (ENUM): Estado del empleado, que puede ser &quot;Activo&quot; o &quot;Inactivo&quot;.</p>
+          
+        </div>
+      </section>
+      
+
+      <!-- Specification -->
+
+      
+
+      <!-- Directed Relationship -->
+
+      
+
+      <!-- Undirected Relationship -->
+
+      
+
+      <!-- Classifier -->
+
+      
+
+      <!-- Interface -->
+
+      
+
+      <!-- Component -->
+
+      
+
+      <!-- Node -->
+
+      
+
+      <!-- Actor -->
+
+      
+
+      <!-- Use Case -->
+
+      
+
+      <!-- Template Parameters -->
+
+      
+
+      <!-- Literals -->
+
+      
+
+      <!-- Attributes -->
+
+      
+
+      <!-- Operations -->
+
+      
+
+      <!-- Receptions -->
+
+      
+
+      <!-- Extension Points -->
+
+      
+
+      <!-- Parameters -->
+
+      
+
+      <!-- Diagrams -->
+
+      
+      
+
+      <!-- Behavior -->
+
+      
+
+      <!-- Action -->
+
+      
+
+      <!-- Interaction -->
+
+      
+
+      <!-- CombinedFragment -->
+
+      
+
+      <!-- Activity -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State Machine -->
+
+      
+
+      <!-- State -->
+
+      
+
+      <!-- Vertex -->
+
+      
+
+      <!-- Transition -->
+
+      
+
+      <!-- Data Model (ERD) -->
+
+      
+
+      <!-- Columns (ERD) -->
+
+      
+      <section>
+        <h3>Columns</h3>
+        
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th width="20%">Name</th>
+            <th width="20%">Type</th>
+            <th width="10%">Primary Key</th>
+            <th width="10%">Foreign Key</th>
+            <th width="20%">Reference To</th>
+            <th width="10%">Nullable</th>
+            <th width="10%">Unique</th>
+          </tr>
+          
+          <tr>
+            <td><a href="8241520206b971ab9174a26cebaa8c1a.html">id_empleado</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="df1646bb8f3593f249dcd73bfdc2bc49.html">nombre</a></td>
+            <td>VARCHAR(100)</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="e083cf23d795b11dfa37ac4632381b77.html">telefono</a></td>
+            <td>VARCHAR(100)</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>true</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="30aa4592dca8d86232f6a57c5f6691f6.html">correo</a></td>
+            <td>VARCHAR(100)</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>true</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="836e2dbd9d2662fa13b77fa41c610471.html">direccion</a></td>
+            <td>VARCHAR(100)</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="3faf7c6728935373a2011e63c0d526d9.html">id_ciudad_pueblo</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>true</span></td>
+            <td>
+              
+                <a href='b7d57eab075972d218767c02137b7a25.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>ciudades_pueblos</a> ::
+              
+              <a href='fe15bf636698169e82485a639ce4426d.html'><span class='node-icon staruml-icon icon-ERDColumn'></span>id_ciudad_pueblo</a>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="09c7f7d1f7751fe7559d528f3ba46c09.html">zipcode</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="b6de19d6feb81a3f2319fb1a4e5fa83d.html">fecha_contratacion</a></td>
+            <td>DATE</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="b5599531baf743c94ee8b3fde3f72871.html">id_puesto_trabajo</a></td>
+            <td>INTEGER</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>true</span></td>
+            <td>
+              
+                <a href='eec5785512da0d39aabb913c37049d3c.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>puestos_trabajos</a> ::
+              
+              <a href='337ef2e8af41b44bb6d0a5c18f82571d.html'><span class='node-icon staruml-icon icon-ERDColumn'></span>id_puesto_trabajo</a>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+          <tr>
+            <td><a href="560ef7fc851d912e544eb3f2117e5dc2.html">estado</a></td>
+            <td>BOOLEAN</td>
+            <td><span class='label label-info'>false</span></td>
+            <td><span class='label label-info'>false</span></td>
+            <td>
+              
+              <span class='label label-info'>null</span>
+            </td>
+            <td><span class='label label-info'>true</span></td>
+            <td><span class='label label-info'>false</span></td>
+          </tr>
+          
+        </table>                
+      </section>
+      
+
+      <!-- Related Entities (ERD) -->
+
+      
+      <section>
+        <h3>Related Entities</h3>
+        
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th width="25%">Entity</th>
+            <th width="25%">Cardinality</th>
+            <th width="25%">Reference Name</th>
+            <th width="25%">Relationship</th>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='78b5973b60a3eb6c0849ade1e94338fe.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>facturas</a></td>
+            <td>1..*</td>
+            <td></td>
+            <td><a href='0d8d9e237d2b621087803959cb89acef.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(empleados —facturas)</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='eec5785512da0d39aabb913c37049d3c.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>puestos_trabajos</a></td>
+            <td>1</td>
+            <td></td>
+            <td><a href='95f4096bb000500ecc6876d0c820c513.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(puestos_trabajos—empleados )</a></td>
+          </tr>
+          
+          
+          <tr>
+            <td><a href='b7d57eab075972d218767c02137b7a25.html'><span class='node-icon staruml-icon icon-ERDEntity'></span>ciudades_pueblos</a></td>
+            <td>1</td>
+            <td></td>
+            <td><a href='788310c492581694c529a412b3c88a1f.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(ciudades_pueblos—empleados )</a></td>
+          </tr>
+          
+        </table>                
+      </section>
+      
+
+      <!-- Data Flows (DFD) -->
+
+      
+
+      <!-- Flows (Flowchart) -->
+
+      
+
+      <!-- Properties -->
+
+      <section>
+        <h3>Properties</h3>
+        
+        <table class="table table-striped table-bordered">
+    <tr>
+        <th width="50%">Name</th>
+        <th width="50%">Value</th>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td>name</td>
+        <td>empleados </td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</table>                
+
+      </section>
+
+      <!-- Tags -->
+
+      
+
+      <!-- Constraints, Dependencies, Dependants -->
+
+      
+
+      <!-- Relationships -->
+
+      
+      
+<section class="element-list">
+    <h3>Relationships</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='0d8d9e237d2b621087803959cb89acef.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(empleados —facturas)</a></li>
+        
+        <li><a href='95f4096bb000500ecc6876d0c820c513.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(puestos_trabajos—empleados )</a></li>
+        
+        <li><a href='788310c492581694c529a412b3c88a1f.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(ciudades_pueblos—empleados )</a></li>
+        
+    </ul>
+</section>
+
+
+
+      <!-- Owned Elements -->
+
+      
+      
+<section class="element-list">
+    <h3>Owned Elements</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='0d8d9e237d2b621087803959cb89acef.html'><span class='node-icon staruml-icon icon-ERDRelationship'></span>(empleados —facturas)</a></li>
+        
+    </ul>
+</section>
+
+
+
+      <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
+      <script>
+      imageMapResize();
+      </script>
+    </div>
+  </body>
+</html>
