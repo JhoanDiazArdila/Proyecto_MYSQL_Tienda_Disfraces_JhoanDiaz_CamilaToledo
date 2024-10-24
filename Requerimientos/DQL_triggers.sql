@@ -6,7 +6,7 @@ CREATE TRIGGER before_insert_productos
 BEFORE INSERT ON productos FOR EACH ROW 
 BEGIN 
     IF NEW.precio_venta <= 0 THEN
-        SET NEW.precio_venta = 100.00
+        SET NEW.precio_venta = 100.00;
     END IF;
 END $$
 DELIMITER ;
@@ -29,7 +29,7 @@ CREATE TRIGGER after_insert_cliente
 AFTER INSERT ON clientes FOR EACH ROW
 BEGIN 
     INSERT INTO logs (mensaje,fecha)
-    VALUES (CONCAT('Se inserto un nuevo cliente ',NEW.nombre,' a las ' NOW()));
+    VALUES (CONCAT('Se inserto un nuevo cliente ',NEW.nombre,' a las ', NOW()));
 END $$
 DELIMITER ;
 
@@ -38,7 +38,7 @@ DELIMITER $$
 CREATE TRIGGER before_delete_cliente
 BEFORE DELETE ON clientes FOR EACH ROW
 BEGIN
-    IF OLD.estado = 'Activo'
+    IF OLD.estado = 'Activo' THEN
         SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'No se puede eliminar un cliente activo';
     END IF;
 END;
@@ -49,7 +49,7 @@ CREATE TRIGGER after_update_cliente
 AFTER UPDATE ON clientes FOR EACH ROW
 BEGIN
     INSERT INTO logs (mensaje,fecha)
-    VALUES (CONCAT('Se modifico un cliente a las ' NOW()));
+    VALUES (CONCAT('Se modifico un cliente a las ', NOW()));
 END $$
 DELIMITER ;
 
@@ -59,7 +59,7 @@ CREATE TRIGGER after_insert_gasto_operativo
 AFTER INSERT ON gastos_operativos FOR EACH ROW
 BEGIN
     INSERT INTO logs(mensaje,fecha)
-    VALUES (CONCAT('Se inserto un nuevo gasto operativo a las ' NOW()));
+    VALUES (CONCAT('Se inserto un nuevo gasto operativo a las ', NOW()));
 END $$
 DELIMITER ;
 
@@ -87,21 +87,20 @@ BEGIN
     CASE 
         WHEN categoria = 1 THEN
             UPDATE maquillaje
-            SET stock = stock - NEW.cantidad
+            SET stock = stock + NEW.cantidad
             WHERE id_producto = NEW.id_producto;
         WHEN categoria = 2 THEN
             UPDATE decoraciones
-            SET stock = stock - NEW.cantidad
+            SET stock = stock + NEW.cantidad
             WHERE id_producto = NEW.id_producto;
         WHEN categoria = 3 THEN
             UPDATE accesorios
-            SET stock = stock - NEW.cantidad
+            SET stock = stock + NEW.cantidad
             WHERE id_producto = NEW.id_producto;
         WHEN categoria = 4 THEN
             UPDATE disfraces
-            SET stock_venta = stock_venta - NEW.cantidad
+            SET stock_venta = stock_venta + NEW.cantidad
             WHERE id_producto = NEW.id_producto;
-            WHERE id_producto = producto_vendido;
         ELSE
             SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'La categoria es incorrecta';
     END CASE;
@@ -136,7 +135,6 @@ BEGIN
             UPDATE disfraces
             SET stock_venta = stock_venta - NEW.cantidad
             WHERE id_producto = NEW.id_producto;
-            WHERE id_producto = producto_vendido;
         ELSE
             SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'La categoria es incorrecta';
     END CASE;
@@ -204,7 +202,7 @@ DELIMITER ;
 
 DELIMITER $$
 CREATE TRIGGER actualizar_estado_envio
-AFTER INSERT ON envio_producto FOR EACH ROW
+AFTER INSERT ON envios FOR EACH ROW
 BEGIN
     UPDATE envios
     SET estado = 'Preparacion'
@@ -227,7 +225,7 @@ DELIMITER ;
 
 DELIMITER $$
 CREATE TRIGGER validacion_pago_factura
-BEFORE INSERT envios FOR EACH ROW
+BEFORE INSERT ON envios FOR EACH ROW
 BEGIN
     DECLARE pago_factura DECIMAL(10,2) DEFAULT 0.00;
     DECLARE pago_transaccion DECIMAL(10,2) DEFAULT 0.00;
@@ -249,7 +247,7 @@ DELIMITER ;
 
 DELIMITER $$
 CREATE TRIGGER detener_adicion_tallas
-BEFORE INSERT tallas FOR EACH ROW
+BEFORE INSERT ON tallas FOR EACH ROW
 BEGIN
     SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Todas las tallas se encuentran contempladas';
 END $$
