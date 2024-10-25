@@ -12,7 +12,7 @@ DO
 BEGIN
     DELETE FROM facturas 
     WHERE fecha < NOW() - INTERVAL 1 YEAR;
-END;
+END $$
 DELIMITER ;
 
 -- 2. Actualizar estado clientes inactivos
@@ -28,7 +28,7 @@ BEGIN
         FROM facturas 
         WHERE fecha > NOW() - INTERVAL 1 YEAR
     );
-END;
+END $$
 DELIMITER ;
 
 
@@ -46,7 +46,7 @@ BEGIN
         FROM facturas_proveedor 
         WHERE fecha > NOW() - INTERVAL 2 YEAR
     );
-END;
+END $$
 DELIMITER ;
 
 
@@ -60,7 +60,7 @@ DO
 BEGIN
     DELETE FROM facturas_proveedor 
     WHERE fecha < NOW() - INTERVAL 3 YEAR;
-END;
+END $$
 DELIMITER ;
 
 -- 5. Limpiar tabla de pedidos de productos a proveedores
@@ -72,7 +72,7 @@ DO
 BEGIN
     DELETE FROM compra_producto
     WHERE fecha < NOW() - INTERVAL 2 YEAR;
-END;
+END $$
 DELIMITER ;
 
 -- 6. Actualizar clientes VIP
@@ -94,7 +94,7 @@ BEGIN
             )> 3 THEN 1
         ELSE 0
     END;
-END;
+END $$
 DELIMITER ;
 
 -- 7. Cobrar deposito 1 dia despues de la fecha de devolucion
@@ -107,7 +107,7 @@ BEGIN
     SET estado_deposito = 'Cobrado'
     WHERE fecha_devolucion < CURDATE()
         AND estado_deposito != 'Entregado';
-END;
+END $$
 DELIMITER ;
 
 -- 8. Desactivar clientes inactivos después de 1 año y medio
@@ -124,7 +124,7 @@ BEGIN
         WHERE f.fecha >= NOW() - INTERVAL 18 MONTH 
             AND estado = 'Activo'
     );
-END;
+END $$
 DELIMITER ;
 
 
@@ -137,7 +137,7 @@ BEGIN
     UPDATE maquillaje
     SET stock = 0  
     WHERE fecha_expiracion = CURDATE();
-END;
+END $$
 DELIMITER ;
 
 
@@ -151,7 +151,7 @@ BEGIN
     SET estado = 'Entregado'
     WHERE fecha_envio < CURDATE() - INTERVAL 3 WEEK
         AND estado NOT IN ('Entregado','Preparacion');
-END;
+END $$
 DELIMITER ;
 
 
@@ -169,7 +169,7 @@ BEGIN
         JOIN facturas f ON vp.id_factura = f.id_factura
         WHERE f.fecha >= NOW() - INTERVAL 6 MONTH
     );
-END;
+END $$
 DELIMITER ;
 
 
@@ -188,7 +188,7 @@ BEGIN
         JOIN tematicas t ON d.id_tematica = d.id_tematica
         WHERE t.nombre = 'Villanos'
     );
-END;
+END $$
 DELIMITER ;
 
 
@@ -223,7 +223,7 @@ BEGIN
 
     END LOOP;
     CLOSE cur_productos;
-END;
+END $$
 DELIMITER ;
 
 
@@ -281,7 +281,7 @@ BEGIN
 
     -- Cierra el cursor
     CLOSE cur_alertas;
-END;
+END $$
 DELIMITER ;
 
 
@@ -300,7 +300,7 @@ BEING
         WHERE fecha < CURDATE() - INTERVAL 2 YEAR
             AND vip = 1;
     );
-END;
+END $$
 DELIMITER ;
 
 -- 16. Recalcular venta de productos según inflación anual
@@ -311,7 +311,7 @@ DO
 BEGIN
     UPDATE productos
     SET precio_venta = precio_venta * 1.05; --aplico un 5%
-END;
+END $$
 DELIMITER ;
 
 
@@ -327,7 +327,7 @@ BEGIN
         FROM transacciones
         WHERE valor_total = 0.00
     );
-END;
+END $$
 DELIMITER ;
 
 
@@ -339,7 +339,7 @@ DO
 BEGIN
     DELETE FROM transacciones
     WHERE fecha_hora < NOW() - INTERVAL 3 YEAR;
-END;
+END $$
 DELIMITER ;
 
 
@@ -352,7 +352,7 @@ DO
 BEGIN
     UPDATE puestos_trabajos
     SET sueldo = sueldo * 1.05;
-END;
+END $$
 DELIMITER ;
 
 
@@ -365,6 +365,6 @@ BEGIN
     UPDATE envios
     SET estado = 'En transito'
     WHERE fecha_envio + INTERVAL 2 DAY = CURDATE();
-END;
+END $$
 DELIMITER ;
 
