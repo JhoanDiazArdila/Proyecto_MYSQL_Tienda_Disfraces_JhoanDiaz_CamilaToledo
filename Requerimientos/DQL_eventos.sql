@@ -291,14 +291,14 @@ DELIMITER $$
 CREATE EVENT IF NOT EXISTS bloquear_clientes_vip
 ON SCHEDULE EVERY 1 MONTH
 DO
-BEING
+BEGIN
     UPDATE clientes
     SET vip = 0
     WHERE id_cliente IN(
         SELECT id_cliente 
         FROM facturas 
         WHERE fecha < CURDATE() - INTERVAL 2 YEAR
-            AND vip = 1;
+            AND vip = 1
     );
 END $$
 DELIMITER ;
@@ -310,7 +310,7 @@ ON SCHEDULE EVERY 1 YEAR
 DO
 BEGIN
     UPDATE productos
-    SET precio_venta = precio_venta * 1.05; --aplico un 5%
+    SET precio_venta = precio_venta * 1.05; -- aplico un 5%
 END $$
 DELIMITER ;
 
@@ -347,7 +347,7 @@ DELIMITER ;
 DELIMITER $$
 CREATE EVENT IF NOT EXISTS aumento_sueldo
 ON SCHEDULE EVERY 1 YEAR
-START '2025-01-01 00:00:00'
+STARTS '2025-01-01 00:00:00'
 DO
 BEGIN
     UPDATE puestos_trabajos
